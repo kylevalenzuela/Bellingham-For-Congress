@@ -13,10 +13,8 @@ function App() {
     <Router history={history}>
       <div>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/welcome" component={SplashPage} />
-          <Route path="/Page-Not-Found" component={NotFound} />
-          <Redirect to="/Page-Not-Found" />
+          <Route exact path="/" component={SplashPage} />
+          <Redirect to="/" />
         </Switch>
       </div>
     </Router>
