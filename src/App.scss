@@ -1,0 +1,540 @@
+
+
+/********************************************
+Variables	
+********************************************/
+
+$bp400: 400px;
+$bp600: 600px;
+$bp750: 750px;
+$bp900: 900px;
+$bp960: 960px;
+$bp1200: 1200px;
+$bp3200: 3200px;
+
+$primaryColor: hsl(202, 35%, 28%);
+$primaryColorLight: hsl(202, 35%, 41%);
+
+
+/********************************************
+Global Styles
+********************************************/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+}
+#root {
+	width: 100%;
+	overflow: hidden;
+}
+
+/* Default Responsive Images  */
+	
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+svg {
+  display: inline-block; 
+  vertical-align: middle;
+}
+
+
+canvas {
+	width: 98.5vw;
+	height: 100vh;
+}
+
+.imgTemp {
+	background: grey; 
+	width: 300px;
+	height: 300px;
+}
+
+.defaultAvatarImage {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+/********************************************
+Misc Tools
+********************************************/
+
+
+/* Throw it off screen, but keeps screen reader properties*/
+
+.screen-reader-text { 
+  position: absolute; 
+  left: -9999px; 
+  top: -9999px; 
+}
+
+/* Generic wrap*/	
+.wrap {
+	width: 100%;
+}
+
+.textCenter {
+	text-align: center;
+}
+
+
+.textLeft {
+	text-align: left;
+}
+
+.bottomCenter {
+
+}
+.aligncenterleft {
+    width: 80vw;
+    align-content: left;
+    text-align: left;
+    margin: 0 auto;
+}
+
+
+//justify right on flexbox
+.justifyRight {
+	margin-left: auto; 
+	order: 2;
+}
+
+.overflowScroll { 
+	overflow: auto;
+}
+
+//disable hover 
+.nohover {
+	pointer-events: none;
+}
+
+.blockit {
+	display: block;
+}
+
+.tothetop{
+	z-index: 99999;
+}
+.thebottom{
+	z-index: 0;
+}
+
+
+
+//this is bad for accessibility bu you will use it
+.displayBadHide {
+	display: none!important;
+}
+.hideVisually {
+	opacity: 0;
+}
+.accessibleHide {
+    position: absolute;
+    left: -999em;
+}
+
+.clickIt {
+	cursor: pointer; 
+}
+
+.verticalCenterFlex {
+	display: flex;
+	align-items: center;
+	height: inherit;
+}
+
+.gridCenter {
+	display: flex;
+	justify-items: center;
+	align-items:   center;
+}
+
+.fixedScreen {
+	width:100vw;
+	height: 100vh;
+}
+
+.fixedHeight {
+	height: 100vh;
+}
+.bodyPadding{
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+.fullScreen {
+	width: 100vw;
+	height: 100vh;
+}
+.fullScreenNudge {
+	height: 95vh!important;
+}
+
+.notouch {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.maxWidthWrap {
+	max-width: $bp960;
+	width:100%;
+	
+}
+
+.maxWidthWrap1200 {
+	width: 100%;
+	height: inherit;
+	max-width: 1200px;
+	margin: 0 auto;	
+}
+
+//underline 
+.undlerline {
+	&:hover {
+		text-decoration: underline;	
+	}
+}
+
+.blocked {
+	display: block;
+}
+
+.inlineBlock {
+	display: inline-block;
+	list-style: none;
+	margin-right: 1em;
+	z-index: 9999;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.fullPage {
+	width: 100vw;
+	height: 100vh;
+}
+
+
+.noScroll {
+	overflow: hidden;
+}
+
+
+.roundedCorners {
+	border-radius: 10px;
+}
+
+.marginBottom {
+	margin-bottom: 1em;
+}
+.marginBottomHalf {
+	margin-bottom: .5em;
+}
+/********************************************
+Flexbox
+********************************************/
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/********************************************
+Selection
+********************************************/
+
+::-moz-selection { /* Code for Firefox */
+    color: ivory;
+}
+
+::selection {
+    color: ivory;
+}
+
+/********************************************
+Colors
+********************************************/
+.white { 
+	color: ivory;
+}
+
+
+
+/********************************************
+Typography
+********************************************/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+h1, h2, h3, h4, h5, h6, h1 a, 
+h2 a, h3 a, h4 a, h5 a, h6 a, 
+p, p a, li, li a, blockquote, 
+pre, strong, aside, aside a, 
+input, div, div a, time, time a,{
+	word-wrap: break-word;
+	text-decoration: none;
+	-moz-appearance: none;
+	appearance: none;
+
+}
+
+
+h1, h2, h3, h4, h5, h6, h1 a, 
+h2 a, h3 a, h4 a, h5 a, h6 a {
+    vertical-align: middle;
+	font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+   // color: $darkBlue;
+}
+
+h1 {
+  font-size: 2.625rem / 2; 
+  font-weight: 600;
+  line-height: 2.625rem / 2;
+
+  @media screen and (min-width: $bp900) {
+ 	font-size: 2.625rem; /* = 42px */
+  	line-height: 2.625rem;	
+  }
+}
+
+h2 {
+	font-size: 2.250rem / 2; 
+	line-height: 2.125rem / 2;
+	line-height: 1.5rem;
+	@media screen and (min-width: $bp900) {
+  		font-size: 2.250rem; /* = 36px */ 
+  		line-height: 2.125rem;
+  	}
+}
+
+h3 {
+  font-size: 2.875rem / 2; /* = 30px */
+  font-weight: 600;
+  line-height: 1.875rem / 2;
+  @media screen and (min-width: $bp900) {
+  	font-size: 1.875rem; /* = 30px */
+	line-height: 1.875rem;
+  }
+}
+
+h4 {
+  font-size: 1.00rem ; 
+  font-weight: 600;
+  line-height: 1.00rem ;
+  @media screen and (min-width: $bp900) {
+  	line-height: 1.500rem;
+  	font-size: 1.500rem;
+   }
+}
+
+h5 {
+  font-size: 1rem; /* = 18px */
+  font-weight: 400;
+  line-height: 1; 
+  @media screen and (min-width: $bp900) {	
+  	font-size: 1.125rem;
+  	line-height: 1.125rem;
+  }
+}
+
+h6 {
+	font-size: 1.000rem; 
+	font-weight: 600; 
+	@media screen and (min-width: $bp900) {
+		font-size: 1.000rem; /* = 16px */
+	}
+}
+
+p {
+	letter-spacing: 0.5px;
+	word-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+div {
+    font-family: 'Open Sans', sans-serif;
+}
+
+label {
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul, ol {
+	 list-style-position: inside;
+	 
+}
+
+li {
+
+}
+
+a{
+	//color: $darkBlue;	
+}
+
+figcaption {
+	font-size: .8rem;
+}
+
+code,
+.code,
+pre {
+  font-size: 16px;
+  padding: 0;
+  padding: 3px;
+  overflow: auto;
+  margin: 1em 0;
+  &:before {
+    display: block;
+    padding: 3px;
+    text-transform: uppercase;
+    content: attr(data-lang);
+  }
+}
+
+
+blockquote {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    color: grey;
+}
+
+
+
+.chrisHeader {
+	width: 100%;
+	height: 3em;
+	background: $primaryColor;
+	color: white;
+}
+
+
+/********************************************
+Splash
+********************************************/
+
+.splashContainer {
+	background: url(img/splash.jpg) no-repeat center center fixed;
+  	background-size: cover;
+  	width: 100vw;
+  	height: 100vh;
+}
+
+.splashGradient {
+	width: inherit;
+	height: inherit;
+	background: linear-gradient(0deg, rgba(46,78,96,0) 31%, rgba(46,78,96,1) 100%);
+	@media screen and(min-width: $bp750) {
+		background: linear-gradient(90deg, rgba(46,78,96,0) 31%, rgba(46,78,96,1) 100%);
+	}
+}
+
+.splashContent {
+	width: 80%;
+	@media screen and (min-width: $bp750) {
+		width: 40%;
+		margin-right: 10%;
+	}
+}
+
+
+/********************************************
+Inputs
+********************************************/
+.splashInput {
+	height: 4em;
+	appearance: none;
+	border: none;
+	padding-left: 1em;
+	width: 100%;
+}
+
+/********************************************
+Buttons
+********************************************/
+.primaryButton {
+	height: 4em;
+	width: 100%;
+	background: $primaryColor;
+	border: none;
+	appearance: none;
+	color: white;
+	font-size: 1em;
+	transition: background linear .3s;
+	cursor: pointer;
+	&:hover{
+		background: $primaryColorLight;
+	};
+}
+.secondaryButton {
+	height: 4em;
+	background: transparent;
+	border: white solid 1px;
+	color: white;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+
+/********************************************
+Grid Layout
+********************************************/
+.grid {
+	display: grid;
+}
+.gridRightCenter {
+	display: grid;
+	justify-items: end;
+	align-items: center;
+	height: inherit;
+}
+.splashGrid {
+	display: grid;
+	height: inherit;
+	align-items: center;
+	justify-items: center;
+	@media screen and(min-width: $bp750) {
+		justify-items: end;
+		
+	}
+}
+.gridSingleVert {
+	display: grid;
+	align-items: start;
+}
+.gridCenter {
+	display: flex;
+	justify-items: center;
+	align-items:   center;
+}
+
+.gridCenterItem {
+  	justify-self: center;
+  	align-self:   center;
+}
+
+.textLogo {
+	
+	font-family: 'Anton', sans-serif;
+	 transform: skewY(-10deg);
+	 margin-bottom: 1em;
+	 font-size: 3em;
+	 line-height: 1em;
+	 color: white;
+	 @media screen and (min-width: $bp600) {
+	 	font-size: 5em;
+	 }
+}
