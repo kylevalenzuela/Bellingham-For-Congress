@@ -1,5 +1,6 @@
 import React from 'react';
 import SplashEmail from '../components/SplashEmail'
+import Logo from '../img/logo.png'
 
 class SplashPage extends React.Component {
 	render() {
@@ -9,9 +10,9 @@ class SplashPage extends React.Component {
 					<div className="splashGrid">
 						<div className="splashContent">
 						<div className="grid">
-							<div className="textLogo gridCenterItem">CHRIS <br/>BELLINGHAM</div>
+							<div className="gridCenterItem marginBottom"><img className="perfectCircle logoImg" src={Logo} alt="Chris Bellingham Logo" /></div>
 						</div>
-							<h1 className="white marginBottom">Being a patriot means building collation. Join us!</h1>
+							<h1 className="white marginBottom">To build a coalition of the people, is a patriotic act. Join us</h1>
 							<SplashEmail />
 						</div>
 					</div>
@@ -20,5 +21,4 @@ class SplashPage extends React.Component {
 		);
 	}
 }
-
 export default SplashPage;

@@ -240,6 +240,10 @@ Misc Tools
 .marginBottomHalf {
 	margin-bottom: .5em;
 }
+
+.perfectCircle {
+	border-radius: 50%;
+}
 /********************************************
 Flexbox
 ********************************************/
@@ -537,4 +541,8 @@ Grid Layout
 	 @media screen and (min-width: $bp600) {
 	 	font-size: 5em;
 	 }
+}
+
+.logoImg {
+	width: 300px;
 }
