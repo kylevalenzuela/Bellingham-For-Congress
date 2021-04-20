@@ -22,9 +22,9 @@ class SplashEmail extends React.Component {
 							<div className="clear">
 								<input className="primaryButton roundedCorners marginBottom" type="submit" value="Join Our Community" />
 							</div>
-						<a href="https://secure.actblue.com/donate/friends-of-bellingham-1">
-							<div className=" secondaryButton roundedCorners flexCenter">Donate</div>
-						</a>
+						<Link to="/">
+							<div className=" secondaryButton roundedCorners flexCenter">Enter Site</div>
+						</Link>
 					</div>
 				</form>
 			</div>

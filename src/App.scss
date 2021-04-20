@@ -1,5 +1,7 @@
 
 
+
+
 /********************************************
 Variables	
 ********************************************/
@@ -12,8 +14,12 @@ $bp960: 960px;
 $bp1200: 1200px;
 $bp3200: 3200px;
 
-$primaryColor: hsl(202, 35%, 28%);
-$primaryColorLight: hsl(202, 35%, 41%);
+$primaryColor: hsl(215, 57%, 24%);
+$secondaryColor: hsl(360, 64%, 49%);
+$clearSecondary: hsla(360, 64%, 49%, .3);
+$clearPrimary: hsla(215, 57%, 24%, .8);
+$primaryColorLight: hsl(215, 57%, 41%);
+$clearPrimaryLight: hsla(215, 57%, 41%, .3);
 
 
 /********************************************
@@ -198,7 +204,7 @@ Misc Tools
 	margin: 0 auto;	
 }
 
-//underline 
+
 .undlerline {
 	&:hover {
 		text-decoration: underline;	
@@ -233,6 +239,13 @@ Misc Tools
 .roundedCorners {
 	border-radius: 10px;
 }
+.perfectCircle {
+	border-radius: 50%;
+}
+
+/********************************************
+Margins and Padding
+********************************************/
 
 .marginBottom {
 	margin-bottom: 1em;
@@ -241,9 +254,13 @@ Misc Tools
 	margin-bottom: .5em;
 }
 
-.perfectCircle {
-	border-radius: 50%;
+.marginTop {
+	margin-top: 1em;
 }
+.paddingTop {
+	padding-top: 1em;
+}
+
 /********************************************
 Flexbox
 ********************************************/
@@ -421,8 +438,9 @@ blockquote {
 .chrisHeader {
 	width: 100%;
 	height: 3em;
-	background: $primaryColor;
+	background: $clearPrimary;
 	color: white;
+	position: fixed;
 }
 
 
@@ -465,6 +483,20 @@ Inputs
 	padding-left: 1em;
 	width: 100%;
 }
+.donationInput {
+	height: 4em;
+	appearance: none;
+	border: $primaryColor solid 2px;
+	width: 400px;
+	text-align: center;
+	font-size: 2em;
+	&:before {
+		content: '$';
+	}
+}
+.inputError {
+	color: $secondaryColor;
+}
 
 /********************************************
 Buttons
@@ -491,6 +523,9 @@ Buttons
 	font-size: 1em;
 	cursor: pointer;
 }
+.buttonWidth {
+	width: 400px;
+}
 
 
 /********************************************
@@ -504,6 +539,10 @@ Grid Layout
 	justify-items: end;
 	align-items: center;
 	height: inherit;
+}
+
+.gridRight {
+	justify-items: end;
 }
 .splashGrid {
 	display: grid;
@@ -520,14 +559,19 @@ Grid Layout
 	align-items: start;
 }
 .gridCenter {
-	display: flex;
+	display: grid;
 	justify-items: center;
 	align-items:   center;
 }
 
 .gridCenterItem {
+	width:inherit;
+	height: inherit;
   	justify-self: center;
   	align-self:   center;
+}
+.justifyCenter {
+	justify-items: center;
 }
 
 .textLogo {
@@ -545,4 +589,124 @@ Grid Layout
 
 .logoImg {
 	width: 300px;
+}
+
+//twofour
+
+.gridTwoFour {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 1fr 1fr;
+	gap: 10px 10px;
+	grid-template-areas:
+	". ."
+	". .";
+	@media screen and (min-width: $bp750) {
+		grid-template-columns: 25% 25% 25% 25%;
+  		grid-template-rows: 1fr;
+	  	grid-template-areas:
+			". . . .";
+	}
+}
+
+/********************************************
+Nav
+********************************************/
+.navMain {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	background: $primaryColor;
+	transition: right cubic-bezier(.27,.67,.65,.63) .35s;
+	right: -100vw;
+	width: 100vw;
+
+	@media screen and (min-width: $bp600) {
+		right: -40vw;
+		width: 40vw;
+	}
+	
+	@media screen and (min-width: $bp750) {
+		right: -20vw;
+		width: 20vw;
+	}
+}
+
+.navPop {
+	right: 0;
+}
+
+
+
+/********************************************
+Home Page
+********************************************/
+
+.heroBanner {
+	width: 100%;
+	height: 100vh;
+	background: url(img/hero.jpg) center center no-repeat;
+	background-size: cover;
+	top: 3em;
+}
+
+.subBanner {
+	width: 100%; 
+	height: 400px;
+	background: $primaryColorLight;
+}
+.heroImgContainer {
+	width: 100%;
+	height: 400px;
+}
+.primaryLightOverlay {
+	width: inherit;
+	height: inherit;
+	background: $clearPrimaryLight;
+}
+.secondaryLightOverlay{
+	width: inherit;
+	height: inherit;
+	background: $clearSecondary;
+}
+
+.heroImg1 {
+	background: url(img/heroimg1.jpg) center center no-repeat;
+	background-size: cover;
+}
+.heroImg2 {
+	background: url(img/heroimg2.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.donationContainer {
+	width: 100%;
+	background: white;
+}
+
+.donationButtons {
+	@extend .perfectCircle;
+	background: $primaryColor;
+	width: 150px;
+	height: 150px;
+	font-size: 2em;
+	font-weight: 700;
+}
+
+/********************************************
+Footer
+********************************************/
+
+.mainFooter {
+	background: $secondaryColor;
+	color: white;
+	text-align: center;
+}
+
+a.footerLink{
+	color: white;
+	text-decoration: underline;
+	&:hover {
+		color: $clearSecondary;
+	}
 }
