@@ -3,16 +3,16 @@ const DonationRoll = () => {
 		<div className="donationContainer">
 			<div className="grid gridTwoFour marginBottom">
 				<div className="gridCenterItem">
-					<div className="donationButtons gridCenter white">$3.14</div>
+					<a href={`https://secure.actblue.com/donate/friends-of-bellingham-1?amount=3.14`}><div className="donationButtons gridCenter white">$3.14</div></a>
 				</div>
 				<div className="gridCenterItem">
-					<div className="donationButtons gridCenter white">$27</div>
+					<a href={`https://secure.actblue.com/donate/friends-of-bellingham-1?amount=27`}><div className="donationButtons gridCenter white">$27</div></a>
 				</div>
 				<div className="gridCenterItem">
-					<div className="donationButtons gridCenter white">$42</div>
+					<a href={`https://secure.actblue.com/donate/friends-of-bellingham-1?amount=42`}><div className="donationButtons gridCenter white">$42</div></a>
 				</div>
 				<div className="gridCenterItem">
-					<div className="donationButtons gridCenter white">$710</div>
+					<a href={`https://secure.actblue.com/donate/friends-of-bellingham-1?amount=710`}><div className="donationButtons gridCenter white">$710</div></a>
 				</div>
 			</div>
 		</div>

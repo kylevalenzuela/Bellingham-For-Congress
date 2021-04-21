@@ -15,7 +15,7 @@ class DonationInput extends React.Component {
 			this.setState({nan: true});
 		}
 		else {
-			window.location.replace(`https://secure.actblue.com/donate/friends-of-bellingham-1?amount=${this.state.input}`);
+			window.location.assign(`https://secure.actblue.com/donate/friends-of-bellingham-1?amount=${this.state.input}`);
 		}
 	};
 	inputChange = (event) => {

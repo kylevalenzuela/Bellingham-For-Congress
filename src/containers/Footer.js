@@ -10,7 +10,7 @@ class Footer extends React.Component {
 				<div className="paddingTop">
 					Press Contact:
 				</div>
-				<div><a className="footerLink marginBottom" href="mailto:press@votebellingham.com">press@votebellingham.com</a></div>
+				<div className="paddingBottom"><a className="footerLink " href="mailto:press@votebellingham.com">press@votebellingham.com</a></div>
 			</footer>
 		);
 	}

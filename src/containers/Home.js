@@ -3,6 +3,8 @@ import {Redirect} from 'react-router-dom';
 import history from '../history';
 import DonationRoll from '../components/DonationRoll';
 import DonationInput from '../components/DonationInput';
+import Carousel from 'react-grid-carousel';
+import HomeGallery from '../components/HomeGallery';
 
 
 class Home extends React.Component {
@@ -18,7 +20,19 @@ class Home extends React.Component {
 					
 				</div>
 				<div className="subBanner">
-					
+					<div className="gridOneTwo">
+						<div>
+							<HomeGallery />
+						</div>		
+						<div className="gridCenter">
+							<h2 className="flexCenter paddingTop white">5 Big Priorities:</h2>
+							<ul className="white ">
+								<li>Underpants</li>
+								<li>????</li>
+								<li>Profit?</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 				<div className="heroImgContainer heroImg1">
 					<div className="primaryLightOverlay">
