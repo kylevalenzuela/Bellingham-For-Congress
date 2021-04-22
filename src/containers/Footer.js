@@ -1,4 +1,5 @@
 import React from 'react';
+import Social from '../components/Social';
 class Footer extends React.Component {
 	render(){
 		return(
@@ -11,6 +12,9 @@ class Footer extends React.Component {
 					Press Contact:
 				</div>
 				<div className="paddingBottom"><a className="footerLink " href="mailto:press@votebellingham.com">press@votebellingham.com</a></div>
+				<div className="footerSocial paddingBottom">
+					<Social />
+				</div>
 			</footer>
 		);
 	}

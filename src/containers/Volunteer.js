@@ -1,37 +1,46 @@
 import React from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import VolunteerForm from '../components/VolunteerForm';
 
-/***
-const CustomForm = () => {
-
-	const url = 'https://friendsofbellingham.us1.list-manage.com/subscribe/post?u=5d8e8be1bc4711020b1d2223e&amp;id=f03eec1df0';
+export const CustomForm = () => {
 	return(
-
-		  <MailchimpSubscribe
-		    url={url}
-		    render={({ subscribe, status, message }) => (
-		      <div>
-		        <SimpleForm onSubmitted={formData => subscribe(formData)} />
-		        {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
-		        {status === "error" && <div style={{ color: "red" }} dangerouslySetInnerHTML={{__html: message}}/>}
-		        {status === "success" && <div style={{ color: "green" }}>Subscribed !</div>}
-		      </div>
-		    )}
-		  />
-		);
-}
-***/
+		 <form >
+        	<input type="text" name="Name" id="" />
+        	<input type="tel" name="Name" id="" />
+        	<input type="email" name="Email" id="" />
+    		<input type="text" name="Zip" id="" />
+    		<button>Submit</button>
+        </form>
+	);
+};
 
 class Volunteer extends React.Component {
 
+	formSubmit = (e) => {
+		e.preventDefault();
+	}
+
+	renderInput = ({ subscribe, status, message }) => {
+		return(
+			<div>
+				<div id="mc_embed_signup">
+					
+				</div>
+	        </div>
+		);
+	}
 	render(){
+		const url = 'https://friendsofbellingham.us1.list-manage.com/subscribe/post?u=5d8e8be1bc4711020b1d2223e&amp;id=f03eec1df0';
+					
 		return(
 			<div className="volunteerHero fixedHeaderAdjust">
 				<div className="primaryLightOverlay">
 					<div className="gridCenter">
 						<h1 className="white">volunteer</h1>
 						<div>
-							
+							<MailchimpSubscribe
+							    url={url}
+							  />
 						</div>
 					</div>					
 				</div>

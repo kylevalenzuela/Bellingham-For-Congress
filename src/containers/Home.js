@@ -5,7 +5,7 @@ import DonationRoll from '../components/DonationRoll';
 import DonationInput from '../components/DonationInput';
 import Carousel from 'react-grid-carousel';
 import HomeGallery from '../components/HomeGallery';
-
+import Logo from '../img/logo.png';
 
 class Home extends React.Component {
 	componentDidMount(){
@@ -17,14 +17,21 @@ class Home extends React.Component {
 		return(
 			<div className="fixedHeaderAdjust">
 				<div className="heroBanner">
-					
+					<div className="homeLogo">
+						<div className="gridCenterItem"><img className="perfectCircle logoImg" src={Logo} alt="Chris Bellingham Logo" /></div>
+						
+					</div>
+					<div className="bottomBumper">
+						<h1 className="white gridCenter marginBottom stroke">Help Make a Small Contribution</h1>
+						<DonationRoll />
+					</div>
 				</div>
 				<div className="subBanner">
-					<div className="gridOneTwo">
+					<div className="gridOneTwo contentPadding">
 						<div>
 							<HomeGallery />
 						</div>		
-						<div className="gridCentere">
+						<div className="gridCenter">
 							<h2 className="flexCenter paddingTop white">5 Big Priorities:</h2>
 							<ul className="white ">
 								<li>Underpants</li>

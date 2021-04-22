@@ -16,12 +16,12 @@ $bp3200: 3200px;
 
 $primaryColor: hsl(215, 57%, 24%);
 $secondaryColor: hsl(360, 64%, 49%);
-$clearSecondary: hsla(360, 64%, 49%, .3);
+$clearSecondary: hsla(370, 90%, 49%, .3);
 $clearPrimary: hsla(215, 57%, 24%, .8);
 $primaryColorLight: hsl(215, 57%, 41%);
 $clearPrimaryLight: hsla(215, 57%, 41%, .3);
 $offBlack: hsl(0, 20%, 6%);
-
+$darkRed: hsl(0, 64%, 42%);
 
 .primaryColor {
 	color: $primaryColor;
@@ -134,6 +134,9 @@ Misc Tools
 .tothetop{
 	z-index: 99999;
 }
+.tothetopish{
+	z-index: 5000;
+}
 .thebottom{
 	z-index: 0;
 }
@@ -174,6 +177,9 @@ Misc Tools
 	width:100vw;
 	height: 100vh;
 }
+.fullWidth {
+	width: 100%;
+}
 
 .fixedHeight {
 	height: 100vh;
@@ -207,8 +213,7 @@ Misc Tools
 }
 
 .maxWidthWrap {
-	max-width: $bp960;
-	width:100%;
+	max-width: $bp1200;
 	
 }
 
@@ -272,12 +277,30 @@ Margins and Padding
 .marginTop {
 	margin-top: 1em;
 }
+.marginTopHalf {
+	margin-bottom: .5em;
+}
+.marginRightHalf {
+	margin-right: .5em;
+}
+.marginLeftHalf {
+	margin-left: .5em;
+}
 .paddingTop {
 	padding-top: 1em;
 }
 
 .paddingBottom {
 	padding-bottom: 1em;
+}
+.contentPadding {
+	padding: 2em;
+}
+
+.bottomBumper {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 /********************************************
 Flexbox
@@ -470,6 +493,9 @@ blockquote {
 	position: fixed;
 }
 
+.stroke {
+}
+
 
 /********************************************
 Splash
@@ -523,6 +549,31 @@ Inputs
 }
 .inputError {
 	color: $secondaryColor;
+}
+
+.splashEmailWrap {
+	input {
+		height: 4em;
+		appearance: none;
+		border: none;
+		padding-left: 1em;
+		width: 100%;
+	}
+	button {
+		height: 4em;
+		width: 100%;
+		background: $primaryColor;
+		border: none;
+		appearance: none;
+		color: white;
+		font-size: 1em;
+		transition: background linear .3s;
+		cursor: pointer;
+		margin-top: 1em;
+		&:hover{
+			background: $primaryColorLight;
+		};
+	}
 }
 
 /********************************************
@@ -605,6 +656,7 @@ Grid Layout
 	
 	font-family: 'Anton', sans-serif;
 	 transform: skewY(-10deg);
+	 width: 100%;
 	 margin-bottom: 1em;
 	 font-size: 3em;
 	 line-height: 1em;
@@ -616,6 +668,8 @@ Grid Layout
 
 .logoImg {
 	width: 300px;
+	margin-top: 5em;
+	margin-right: 5em;
 }
 
 //twofour
@@ -631,6 +685,7 @@ Grid Layout
 	@media screen and (min-width: $bp750) {
 		grid-template-columns: 25% 25% 25% 25%;
   		grid-template-rows: 1fr;
+  		gap: 10px 10px;
 	  	grid-template-areas:
 			". . . .";
 		
@@ -694,6 +749,21 @@ Nav
 	right: 0;
 }
 
+.navLinks {
+	
+	div {
+		margin: .5em;
+	}
+
+
+	a {
+		color: white;
+		font-size: 1.6em;
+		&:hover {
+			color: $primaryColorLight;
+		}
+	}
+}
 
 
 /********************************************
@@ -710,13 +780,19 @@ Home Page
 
 .subBanner {
 	width: 100%; 
-	height: 400px;
 	background: $primaryColorLight;
 	li {
 		font-size: 2em;
 
 	}
 }
+
+.homeLogo {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
 .heroImgContainer {
 	width: 100%;
 	height: 400px;
@@ -743,7 +819,6 @@ Home Page
 
 .donationContainer {
 	width: 100%;
-	background: white;
 }
 
 .donationButtons {
@@ -754,6 +829,7 @@ Home Page
 	font-size: 2em;
 	font-weight: 700;
 	transition: background linear .3s;
+	border: white 2px solid;
 	&:hover {
 		background: $secondaryColor;
 	}
@@ -805,6 +881,53 @@ Volunteer
 	height: 100vh;
 	background: url(/img/volunteerhero.jpg) center center no-repeat;
 }
+@mixin socialFill($color) {
+	fill: $color;
+}
+.socialWrap {
+	svg {
+		fill: white;
+		cursor: pointer;
+		margin-right: .5em;
+		&:hover {
+			@include socialFill($primaryColorLight);
+		}
+	}
+}
+
+.socialWrapHeader {
+	svg {
+		fill: white;
+		cursor: pointer;
+		margin-right: .5em;
+		&:hover {
+			@include socialFill($primaryColor);
+		}
+	}
+}
+/********************************************
+Donate
+********************************************/
+.donateHero{ 
+	background: url(img/donatehero.jpg) center -210px no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	width: 100%;
+	height:50vh;
+	@media screen and (min-width:$bp750) {
+		background: url(img/donatehero.jpg) center -410px no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	@media screen and (min-width:$bp1200) {
+		background: url(img/donatehero.jpg) center -900px no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+}
+
+
+
 /********************************************
 Footer
 ********************************************/
@@ -819,6 +942,16 @@ a.footerLink{
 	color: white;
 	text-decoration: underline;
 	&:hover {
-		color: $clearSecondary;
+		color: $darkRed;
 	}
 }
+.footerSocial {
+	svg {
+		fill: white;
+		&:hover {
+			fill: $darkRed;
+		}
+	}
+}
+
+#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }

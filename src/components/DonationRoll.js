@@ -1,7 +1,7 @@
 const DonationRoll = () => {
 	return(
-		<div className="donationContainer">
-			<div className="grid gridTwoFour marginBottom">
+		<div className="donationContainer gridCenter transparent">
+			<div className=" gridTwoFour marginBottom maxWidthWrap">
 				<div className="gridCenterItem">
 					<a href={`https://secure.actblue.com/donate/friends-of-bellingham-1?amount=3.14`}><div className="donationButtons gridCenter white">$3.14</div></a>
 				</div>

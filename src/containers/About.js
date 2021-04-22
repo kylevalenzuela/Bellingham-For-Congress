@@ -2,6 +2,8 @@ import React from 'react';
 import about from '../img/aboutdetail.jpg'
 import quote from '../img/aboutquote.jpg';
 import VolunteerSplash from '../components/VolunteerSplash';
+import DonationRoll from '../components/DonationRoll';
+import DonationInput from '../components/DonationInput';
 
 class About extends React.Component {
 	render() {
@@ -38,6 +40,14 @@ class About extends React.Component {
 					<div className="blackGradient">
 					</div>
 					</div>
+				</div>
+				<div>
+					<div>
+					<h1 className="gridCenter marginTop marginBottom">Make a Quick Donation</h1>
+					<DonationRoll />
+					<h1 className="gridCenter marginTop marginBottom">Or Name Your Own Price!</h1>
+					<DonationInput />
+				</div>
 				</div>
 				<VolunteerSplash />
 			</div>
