@@ -1,5 +1,5 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
+import {Redirect, Link} from 'react-router-dom';
 import history from '../history';
 import DonationRoll from '../components/DonationRoll';
 import DonationInput from '../components/DonationInput';
@@ -15,7 +15,7 @@ class Home extends React.Component {
 	}
 	render() {
 		return(
-			<div>
+			<div className="fixedHeaderAdjust">
 				<div className="heroBanner">
 					
 				</div>
@@ -24,7 +24,7 @@ class Home extends React.Component {
 						<div>
 							<HomeGallery />
 						</div>		
-						<div className="gridCenter">
+						<div className="gridCentere">
 							<h2 className="flexCenter paddingTop white">5 Big Priorities:</h2>
 							<ul className="white ">
 								<li>Underpants</li>
@@ -46,8 +46,12 @@ class Home extends React.Component {
 					<DonationInput />
 				</div>
 				<div className="heroImgContainer heroImg2">
-					<div className="secondaryLightOverlay">
-						
+					<div className="secondaryLightOverlay gridCenter">
+						<Link to="/volunteer">
+							<div className="buttonWidth gridCenter primaryButton">
+								Volunteer
+							</div>
+						</Link>
 					</div>
 				</div>
 			</div>

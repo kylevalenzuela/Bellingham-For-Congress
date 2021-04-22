@@ -1,12 +1,16 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
 class SplashEmail extends React.Component {
 	componentDidMount(){
 		localStorage.setItem('userDidVisit', true);
 	}
 	render() {
+		const url = "https://friendsofbellingham.us1.list-manage.com/subscribe/post?u=5d8e8be1bc4711020b1d2223e&amp;id=f3ebb2fd16";
+
 		return(
+			
 			<div id="mc_embed_signup">
 				<form className="gridSingleVert validate" action="https://friendsofbellingham.us1.list-manage.com/subscribe/post?u=5d8e8be1bc4711020b1d2223e&amp;id=f3ebb2fd16" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" noValidate>
 					<div id="mc_embed_signup_scroll">

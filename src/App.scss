@@ -20,7 +20,12 @@ $clearSecondary: hsla(360, 64%, 49%, .3);
 $clearPrimary: hsla(215, 57%, 24%, .8);
 $primaryColorLight: hsl(215, 57%, 41%);
 $clearPrimaryLight: hsla(215, 57%, 41%, .3);
+$offBlack: hsl(0, 20%, 6%);
 
+
+.primaryColor {
+	color: $primaryColor;
+}
 
 /********************************************
 Global Styles
@@ -161,6 +166,8 @@ Misc Tools
 	display: flex;
 	justify-items: center;
 	align-items:   center;
+	width: inherit;
+	height: inherit;
 }
 
 .fixedScreen {
@@ -181,6 +188,14 @@ Misc Tools
 }
 .fullScreenNudge {
 	height: 95vh!important;
+}
+
+.fixedHeaderAdjust {
+	padding-top: 3em;
+}
+
+.aboutPadding {
+	padding: 1em 3em;
 }
 
 .notouch {
@@ -280,10 +295,12 @@ Selection
 
 ::-moz-selection { /* Code for Firefox */
     color: ivory;
+    background: $primaryColor;
 }
 
 ::selection {
     color: ivory;
+    background: $primaryColor;
 }
 
 /********************************************
@@ -294,7 +311,14 @@ Colors
 }
 
 
-
+.blackGradient {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(0deg, rgba(46,78,96,0) 31%, rgba(18, 12, 12, 1) 100%);
+	@media screen and(min-width: $bp750) {
+		background: linear-gradient(275deg, rgba(46,78,96,0) 0%, rgba(18,12,12,1) 100%);
+	}
+}
 /********************************************
 Typography
 ********************************************/
@@ -615,13 +639,28 @@ Grid Layout
 .gridOneTwo {
 	display: grid;
 	grid-template-columns: 100%;
-	grid-template-rows: 1fr;
+	grid-template-rows: 1fr 1fr;
 	grid-template-areas:
 		"."
 		".";
 	@media screen and (min-width: $bp750) {
 		grid-template-columns: 50% 50%;
-		grid-template-rows: 1fr 1fr;
+		grid-template-rows: 1fr;
+		gap: 10px 10px;
+		grid-template-areas:
+			". .";
+	}
+}
+.gridoneTwo-thirds {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 1fr;
+	grid-template-areas:
+		"."
+		".";
+	@media screen and (min-width: $bp1200) {
+		grid-template-columns: 0.8fr 1.2fr;
+  		grid-template-rows: 1fr;
 		gap: 10px 10px;
 		grid-template-areas:
 			". .";
@@ -720,6 +759,52 @@ Home Page
 	}
 }
 
+
+
+/********************************************
+Home Page
+********************************************/
+
+.aboutHero {
+	width: 100%;
+	height: 300px;
+	background: url(img/abouthero.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.aboutSub {
+	background: ivory;
+}
+.aboutDetails {
+	background: $primaryColorLight;
+}
+.aboutQuote {
+	background: $offBlack;
+	p {
+		color: white;
+		font-size: 2em;
+	}
+}
+.quoteimg {
+	background: url(/img/aboutquote.jpg) center right no-repeat;
+	background-size: cover;
+}
+
+.volunteerSplash {
+	width: 100%; 
+	height: 400px;
+	background: url(/img/volunteer.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+/********************************************
+Volunteer
+********************************************/
+.volunteerHero {
+	width: 100vw;
+	height: 100vh;
+	background: url(/img/volunteerhero.jpg) center center no-repeat;
+}
 /********************************************
 Footer
 ********************************************/
