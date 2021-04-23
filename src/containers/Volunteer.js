@@ -1,5 +1,5 @@
-import React from 'react';
-import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import React, { Component } from 'react';
+import Mailchimp from 'react-mailchimp-form';
 import VolunteerForm from '../components/VolunteerForm';
 
 export const CustomForm = () => {
@@ -30,16 +30,57 @@ class Volunteer extends React.Component {
 		);
 	}
 	render(){
-		const url = 'https://friendsofbellingham.us1.list-manage.com/subscribe/post?u=5d8e8be1bc4711020b1d2223e&amp;id=f03eec1df0';
 					
 		return(
 			<div className="volunteerHero fixedHeaderAdjust">
 				<div className="primaryLightOverlay">
-					<div className="gridCenter">
-						<h1 className="white">volunteer</h1>
-						<div>
-							<MailchimpSubscribe
-							    url={url}
+					<div className="fullWidth">
+						<h1 className="white contentPadding gridCenter">volunteer</h1>
+						<h2 className="gridCenter white" >Help Out Our Community</h2>
+						<div className="contentPadding gridCenter">
+							 <Mailchimp
+							  action='https://friendsofbellingham.us1.list-manage.com/subscribe/post?u=5d8e8be1bc4711020b1d2223e&amp;id=f03eec1df0' 
+							  
+							  //Adding multiple fields:
+							  fields={[
+							    {
+							      name: 'EMAIL',
+							      placeholder: 'Email',
+							      type: 'email',
+							      required: true,
+							    },
+							    {
+							      name: 'NAME',
+							      placeholder: 'name',
+							      type: 'text',
+							      required: true
+							    },
+							     {
+							      name: 'PHONE',
+							      placeholder: 'phone',
+							      type: 'tel',
+							      required: true
+							    },
+							     {
+							      name: 'ZIP',
+							      placeholder: 'zip',
+							      type: 'text',
+							      required: true
+							    },
+							  ]}
+							  // Change predetermined language
+							  messages = {
+							    {
+							      sending: ">Sending...",
+							      success: "Thank you for subscribing!",
+							      error: "An unexpected internal error has occurred.",
+							      empty: "You must write an e-mail.",
+							      duplicate: "Too many subscribe attempts for this email address",
+							      button: "Subscribe!"
+							    }
+							  }
+							  // Add a personalized class
+							  className='volunteerContainer buttonWidth '
 							  />
 						</div>
 					</div>					

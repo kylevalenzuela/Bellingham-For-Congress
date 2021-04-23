@@ -1,6 +1,6 @@
 import React from 'react';
-import SplashEmail from '../components/SplashEmail'
-import Logo from '../img/logo.png'
+import SplashEmail from '../components/SplashEmail';
+import Logo from '../img/logo.png';
 
 class SplashPage extends React.Component {
 	render() {

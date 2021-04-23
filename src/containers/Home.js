@@ -17,7 +17,7 @@ class Home extends React.Component {
 		return(
 			<div className="fixedHeaderAdjust">
 				<div className="heroBanner">
-					<div className="homeLogo">
+					<div className="homeLogo gridCenterItem">
 						<div className="gridCenterItem"><img className="perfectCircle logoImg" src={Logo} alt="Chris Bellingham Logo" /></div>
 						
 					</div>
