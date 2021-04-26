@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.d058948f.chunk.css",
+    "main.css": "/static/css/main.23c79920.chunk.css",
     "main.js": "/static/js/main.6ba9d822.chunk.js",
     "main.js.map": "/static/js/main.6ba9d822.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.374605ce.js",
@@ -8,7 +8,7 @@
     "static/js/2.0fea191b.chunk.js": "/static/js/2.0fea191b.chunk.js",
     "static/js/2.0fea191b.chunk.js.map": "/static/js/2.0fea191b.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.d058948f.chunk.css.map": "/static/css/main.d058948f.chunk.css.map",
+    "static/css/main.23c79920.chunk.css.map": "/static/css/main.23c79920.chunk.css.map",
     "static/js/2.0fea191b.chunk.js.LICENSE.txt": "/static/js/2.0fea191b.chunk.js.LICENSE.txt",
     "static/media/aboutdetail.d616a9bb.jpg": "/static/media/aboutdetail.d616a9bb.jpg",
     "static/media/App.scss": "/static/media/volunteerhero.e0212b9b.jpg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.374605ce.js",
     "static/js/2.0fea191b.chunk.js",
-    "static/css/main.d058948f.chunk.css",
+    "static/css/main.23c79920.chunk.css",
     "static/js/main.6ba9d822.chunk.js"
   ]
 }
