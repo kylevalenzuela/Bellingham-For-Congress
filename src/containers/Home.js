@@ -32,11 +32,11 @@ class Home extends React.Component {
 							<HomeGallery />
 						</div>		
 						<div className="gridCenter">
-							<h2 className="flexCenter paddingTop white">5 Big Priorities:</h2>
+							<h2 className="flexCenter paddingTop white">3 Priorities:</h2>
 							<ul className="white ">
-								<li>Underpants</li>
-								<li>????</li>
-								<li>Profit?</li>
+								<li>Healthcare</li>
+								<li>Jobs</li>
+								<li>Safety & Security</li>
 							</ul>
 						</div>
 					</div>
