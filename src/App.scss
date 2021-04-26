@@ -799,7 +799,11 @@ Home Page
 	position: absolute;
 	right: 1em;
 	top: 1em;
-	width: 200px;
+	width: 140px;
+	@media screen and (min-width: $bp400) {
+		width: 200px;
+	}
+
 	@media screen and (min-width: $bp750) {
 		width: auto;
 		right: 0;
