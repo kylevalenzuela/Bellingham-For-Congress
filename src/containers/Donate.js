@@ -7,7 +7,7 @@ class Donate extends React.Component {
 			<div className="fixedHeaderAdjust ">
 				<div className="donateHero ">
 					<div className="secondaryLightOverlay gridCenter">
-						<h1 className="white" >Help Contribute to Friends of Chris Bellingham</h1>
+						<h1 className="white" >Contribute to Bellingham for Congress</h1>
 						
 					</div>
 				</div>

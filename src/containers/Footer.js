@@ -4,7 +4,7 @@ class Footer extends React.Component {
 	render(){
 		return(
 			<footer className="mainFooter">
-				<div className="subFooter">Bellingham for Congress.</div>
+				<div className="subFooter">©Paid by Bellingham for Congress </div>
 				<div className="paddingTop">
 					General Inquiries:
 				</div>
